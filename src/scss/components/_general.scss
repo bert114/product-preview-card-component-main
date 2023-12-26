@@ -1,0 +1,9 @@
+@use "../global/config" as *;
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-align: initial;
+  -webkit-tap-highlight-color: transparent;
+}
