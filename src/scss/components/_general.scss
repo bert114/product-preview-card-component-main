@@ -1,4 +1,9 @@
 @use "../global/config" as *;
+body {
+  font-size: 14px;
+  font-family: $ff;
+  color: $clr-text;
+}
 
 button {
   cursor: pointer;

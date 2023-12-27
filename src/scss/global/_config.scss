@@ -1,24 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
 
-$ff: "Hanken Grotesk", sans-serif;
+$ff-heading: "Fraunces", serif;
+$ff: "Montserrat", sans-serif;
 $medium: 500;
 $bold: 700;
-$extra-bold: 800;
 
-$heading: clamp(1.875rem, 0.9821rem + 2.381vw, 3.125rem);
-$sub-heading: clamp(1.125rem, 2rem + -1.1667vw, 1.5625rem);
+:root {
+  font-size: 62.5%;
+}
 
-$clr-bg: var(--clr-bg);
-$clr-text: var(--clr-text);
+$clr-bg: var(--clr-primary100);
+$clr-text: var(--clr-neutral500);
+$clr-primary300: var(--clr-primary300);
+$clr-neutral500: var(--clr-neutral500);
 
-$clr-gradient-outer: linear-gradient(
-  to bottom,
-  hsl(252, 100%, 67%),
-  hsl(241, 81%, 54%)
-);
-
-$clr-gradient-inner: linear-gradient(
-  to bottom,
-  hsla(256, 72%, 46%, 1),
-  hsla(241, 72%, 46%, 0)
-);
+body {
+  font-size: 14px;
+}

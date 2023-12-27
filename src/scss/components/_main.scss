@@ -1,0 +1,130 @@
+@use "../global/config" as *;
+@use "../global/fa" as *;
+@use "../global/class" as *;
+
+:root {
+  --clr-primary100: hsl(30, 38%, 92%);
+  --clr-primary300: hsl(158, 36%, 37%);
+
+  --clr-neutral100: hsl(0, 0%, 100%);
+  --clr-neutral400: hsl(228, 12%, 48%);
+  --clr-neutral500: hsl(212, 21%, 14%);
+}
+
+.card-wrapper {
+  background-color: var(--clr-primary100);
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1em 16px;
+  color: var(--clr-neutral400);
+
+  .container {
+    background-color: var(--clr-neutral100);
+    min-height: 610px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  }
+
+  picture {
+    position: relative;
+    &::before {
+      content: "";
+      background-color: $clr-text;
+      opacity: 0.1;
+      position: absolute;
+      inset: 0;
+    }
+  }
+
+  article {
+    padding: 2.3rem 2.5rem;
+
+    > :nth-child(1) {
+      letter-spacing: 4px;
+      font-size: 13px;
+    }
+
+    > :nth-child(4) {
+      font-size: 3.2rem;
+      display: flex;
+      align-items: center;
+      font-family: $ff-heading;
+      color: var(--clr-primary300);
+      gap: 0.6em;
+
+      span {
+        font-size: 14px;
+        text-decoration: line-through;
+      }
+    }
+  }
+
+  h1 {
+    font-size: 3.2rem;
+    font-family: $ff-heading;
+    font-weight: $bold;
+    line-height: 1;
+    color: var(--clr-neutral500);
+    margin: 0.4em 0 0.6em 0;
+  }
+
+  p {
+    line-height: 1.6;
+    margin-bottom: 1.4em;
+  }
+
+  button {
+    background-color: var(--clr-primary300);
+    color: var(--clr-neutral100);
+    height: 3.5em;
+    width: 100%;
+    margin-top: 1em;
+    text-align: center;
+    font-weight: $bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8em;
+    border-radius: 6px;
+    transition: 0.15s;
+    @extend .primary-btn;
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    .icon {
+      @include fa-icon-solid($fa-var-cart-shopping);
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  :root {
+    font-size: 10px;
+  }
+
+  .card-wrapper {
+    .container {
+      display: flex;
+      max-width: 600px;
+      min-height: 450px;
+      align-items: center;
+
+      > * {
+        flex: 1;
+      }
+
+      picture {
+        flex: 0 1 300px;
+      }
+
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
