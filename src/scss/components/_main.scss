@@ -21,7 +21,6 @@
 
   .container {
     background-color: var(--clr-neutral100);
-    min-height: 610px;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -39,7 +38,7 @@
   }
 
   article {
-    padding: 2.3rem 2.5rem;
+    padding: 2.5rem 2.5rem;
 
     > :nth-child(1) {
       letter-spacing: 4px;
@@ -111,8 +110,11 @@
     .container {
       display: flex;
       max-width: 600px;
-      min-height: 450px;
       align-items: center;
+
+      article {
+        padding: 0 auto;
+      }
 
       > * {
         flex: 1;
