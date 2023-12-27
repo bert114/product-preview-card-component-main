@@ -67,12 +67,12 @@
     font-weight: $bold;
     line-height: 1;
     color: var(--clr-neutral500);
-    margin: 0.4em 0 0.6em 0;
+    margin: 1rem 0 1rem 0;
   }
 
   p {
     line-height: 1.6;
-    margin-bottom: 1.4em;
+    margin-bottom: 1.9rem;
   }
 
   button {
@@ -124,6 +124,10 @@
       img {
         height: 100%;
         object-fit: cover;
+      }
+
+      article {
+        padding: 0 auto;
       }
     }
   }
